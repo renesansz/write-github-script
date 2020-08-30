@@ -18,3 +18,8 @@ jobs:
               repo: context.repo.repo,
               body: "🎉 You've created this issue comment in Github script!!!"
             })
+            github.projects.createCard({
+              column_id: 10064431,
+              content_id: context.payload.id,
+              content_type: "Issue"
+            })
